@@ -63,5 +63,10 @@ void WavFile::WriteFile()
     WriteFileData();
 }
 
+const std::string WavFile::GetFileName()
+{
+    return name;
+}
+
 
 

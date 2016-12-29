@@ -31,6 +31,7 @@ private:
 public:
     WavFile(std::string pFileName, double pSampleRate, std::vector<int16_t> & pSoundData);
     void WriteFile();
+    const std::string GetFileName();
 };
 
 

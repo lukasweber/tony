@@ -47,3 +47,11 @@ uint32_t ToneGenerator::GetTotalSamples()
     return totalSamples;
 }
 
+WavFile* ToneGenerator::SaveAsWavFile(std::string pFileName)
+{
+    std::vector<int16_t> soundData = GetByteStream();
+    WavFile* pFile = new WavFile(pFileName, SAMPLE_RATE, soundData);
+    pFile->WriteFile();
+    return pFile;
+}
+

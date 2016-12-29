@@ -9,6 +9,7 @@
 #include <vector>
 #include <list>
 #include "Tone.h"
+#include "WavFile.h"
 
 #define SAMPLE_RATE 44100
 
@@ -22,6 +23,7 @@ public:
     void GenerateRandomTones();
     uint32_t GetTotalSamples();
     std::vector<int16_t> GetByteStream();
+    WavFile * SaveAsWavFile(std::string fileName);
 };
 
 

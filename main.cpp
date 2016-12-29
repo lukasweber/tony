@@ -4,13 +4,14 @@
 
 int main()
 {
-    std::cout << "TONY" << std::endl;
+    std::cout << "TONY Alpha v0.0.1" << std::endl;
+
+    //just to test :)
     ToneGenerator generator;
     generator.GenerateRandomTones();
+    WavFile* pFile = generator.SaveAsWavFile("test.wav");
 
-    std::vector<int16_t> soundData = generator.GetByteStream();
-    WavFile file("test.wav", 44100, soundData);
+    std::cout << "File: " << pFile->GetFileName() << std::endl;
 
-    file.WriteFile();
     return 0;
 }
