@@ -1,5 +1,5 @@
 //
-// Created by lukas on 28.12.16.
+// Created by Lukas Weber on 28.12.16.
 //
 
 #ifndef TONY_TONE_H
@@ -9,13 +9,17 @@
 #include <vector>
 #include <cstdint>
 
-class Tone {
+class Tone
+{
 private:
-    double frequenzy;
+    double frequency;
     double sampleRate;
+    double length;
+    double amplitude;
 public:
-    Tone(double sampleRate, double frequenzy);
-    void WriteTone(std::vector<uint32_t> &buffer);
+    Tone(double pSampleRate, double pFrequency, double pLength);
+    uint32_t GetTotalSamples();
+    void WriteTone(std::vector<int16_t> &buffer);
 };
 
 
