@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ToneGenerator.h"
 #include "WavFile.h"
+#include "MelodyReader.h"
 
 int main()
 {
@@ -8,10 +9,13 @@ int main()
 
     //just to test :)
     ToneGenerator generator;
-    generator.GenerateRandomTones();
+    generator.ReadMelodyFromFile("melody1");
+
     WavFile* pFile = generator.SaveAsWavFile("test.wav");
 
     std::cout << "File: " << pFile->GetFileName() << std::endl;
+
+    delete pFile;
 
     return 0;
 }

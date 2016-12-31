@@ -3,5 +3,5 @@ project(tony)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES main.cpp ToneGenerator.cpp ToneGenerator.h Tone.cpp Tone.h WavFile.cpp WavFile.h)
+set(SOURCE_FILES main.cpp ToneGenerator.cpp ToneGenerator.h Tone.cpp Tone.h WavFile.cpp WavFile.h MelodyReader.cpp MelodyReader.h)
 add_executable(tony ${SOURCE_FILES})

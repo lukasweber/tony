@@ -3,6 +3,7 @@
 //
 
 #include "ToneGenerator.h"
+#include "MelodyReader.h"
 #include <fstream>
 #include <iostream>
 
@@ -53,5 +54,11 @@ WavFile* ToneGenerator::SaveAsWavFile(std::string pFileName)
     WavFile* pFile = new WavFile(pFileName, SAMPLE_RATE, soundData);
     pFile->WriteFile();
     return pFile;
+}
+
+void ToneGenerator::ReadMelodyFromFile(std::string fileName)
+{
+    MelodyReader reader;
+    reader.WriteMelody(fileName, this->tones);
 }
 

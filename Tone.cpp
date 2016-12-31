@@ -18,9 +18,6 @@ void Tone::WriteTone(std::vector<int16_t> &buffer)
     //get the total number of samples for this tone
     const uint32_t totalSamples = GetTotalSamples();
 
-    //calculate the pulsatance
-    //const double w =  ;
-
     //generate all samples for this tone and add them to the buffer
     for(int32_t t = 0; t < totalSamples; t++)
     {

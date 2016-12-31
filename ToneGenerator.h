@@ -13,6 +13,7 @@
 
 #define SAMPLE_RATE 44100
 
+
 class ToneGenerator
 {
 private:
@@ -22,6 +23,7 @@ public:
     ToneGenerator();
     void GenerateRandomTones();
     uint32_t GetTotalSamples();
+    void ReadMelodyFromFile(std::string fileName);
     std::vector<int16_t> GetByteStream();
     WavFile * SaveAsWavFile(std::string fileName);
 };
