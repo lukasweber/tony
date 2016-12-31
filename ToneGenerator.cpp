@@ -9,18 +9,6 @@
 
 ToneGenerator::ToneGenerator() : sampleRate(SAMPLE_RATE) {}
 
-void ToneGenerator::GenerateRandomTones()
-{
-    //tones.push_back(Tone(261.626,sampleRate, 1));
-    tones.push_back(Tone(sampleRate, 261.626, 0.5));
-    tones.push_back(Tone(sampleRate, 293.66, 0.5));
-    tones.push_back(Tone(sampleRate, 329.63, 0.5));
-    tones.push_back(Tone(sampleRate, 349.23, 0.5));
-    tones.push_back(Tone(sampleRate, 392.00, 0.5));
-    tones.push_back(Tone(sampleRate, 0, 0.5));
-    tones.push_back(Tone(sampleRate, 392.00, 0.5));
-    GetByteStream();
-}
 
 std::vector<int16_t> ToneGenerator::GetByteStream()
 {

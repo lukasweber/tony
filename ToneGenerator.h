@@ -21,7 +21,6 @@ private:
     std::list<Tone> tones;
 public:
     ToneGenerator();
-    void GenerateRandomTones();
     uint32_t GetTotalSamples();
     void ReadMelodyFromFile(std::string fileName);
     std::vector<int16_t> GetByteStream();
