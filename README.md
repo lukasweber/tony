@@ -11,6 +11,7 @@ Just clone from git and call make.
 ```
 git clone https://github.com/devlukas/tony
 cd tony
+cmake CMakeLists.txt
 make
 ```
 
