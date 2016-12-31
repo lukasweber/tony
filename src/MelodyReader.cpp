@@ -3,6 +3,7 @@
 //
 
 #include <algorithm>
+#include <cmath>
 #include "MelodyReader.h"
 #include "ToneGenerator.h"
 #include <sstream>
