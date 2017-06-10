@@ -9,7 +9,7 @@ This project is just for fun to get a little bit into audio-programming.
 ## Installation
 Just clone from git and call make.
 ```
-git clone https://github.com/devlukas/tony
+git clone https://github.com/lukasweber/tony
 cd tony
 cmake .
 make
